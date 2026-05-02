@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Dîner de Gastronomie Française</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        
+        body {
+            background-color: #f1ede4;
+            display: grid;
+            gap: 40px;
+            grid-template-columns: 1fr;
+            margin: 0;
+            padding: 40px 0;
+            place-items: center;
+            padding-bottom: 100px;
+        }
+
+        .slide {
+            background-color: #FDFBF7;
+            border: 2px solid #D4AF37;
+            border-radius: 4px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            color: #4A4A4A;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Lato', sans-serif;
+            height: 720px;
+            justify-content: center;
+            overflow: hidden;
+            padding: 60px;
+            position: relative;
+            width: 1280px;
+        }
+
+        h1, h2, h3 {
+            color: #6B0D17;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+        }
+
+        h1 { font-size: 80px; text-align: center; }
+        h2 { font-size: 48px; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; margin-bottom: 30px; }
+        h3 { font-size: 30px; color: #D4AF37; margin-bottom: 15px; font-style: italic; }
+
+        p, li { font-size: 22px; line-height: 1.6; }
+        
+        .subtitle {
+            color: #D4AF37;
+            font-size: 24px;
+            letter-spacing: 4px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            height: 100%;
+        }
+
+        .image-box {
+            border: 4px solid #D4AF37;
+            height: 450px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        ul { list-style-type: square; color: #D4AF37; padding-left: 30px; }
+        ul li span { color: #4A4A4A; }
+        ul li { margin-bottom: 20px; }
+
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Minimalist Audio Player Styling */
+        .audio-player-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #FDFBF7;
+            border: 1px solid #D4AF37;
+            padding: 10px 15px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            z-index: 1000;
+        }
+
+        .audio-label {
+            font-family: 'Lato', sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6B0D17;
+            font-weight: 700;
+        }
+
+        audio {
+            height: 30px;
+            filter: sepia(20%) saturate(70%) hue-rotate(10deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="audio-player-container">
+        <div class="audio-label">Ambiance Musicale</div>
+        <audio controls loop>
+            <source src="https://files.catbox.moe/hz3apy.m4a" type="audio/mp4">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="slide">
+        <div class="center-content">
+            <h1>Un Dîner de<br>Gastronomie Française</h1>
+            <p class="subtitle">An Elegant Evening</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>Escoffier Duck Confit</h2>
+        <div class="two-column">
+            <div>
+                <h3>The Main Course</h3>
+                <ul>
+                    <li><span>Features a masterfully crisped skin that crackles upon the first bite, highlighting the rich, rendered fat.</span></li>
+                    <li><span>The succulent meat is slow-roasted for hours, resulting in a perfectly tender, fall-off-the-bone texture.</span></li>
+                    <li><span>Ideally served hot over a bed of roasted potatoes or paired with a sturdy, bitter chicory salad.</span></li>
+                </ul>
+            </div>
+            <div class="image-box">
+                <img src="https://i.postimg.cc/qqwpvnW3/duck.png" alt="Duck Confit">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>Chocolate Macarons</h2>
+        <div class="two-column">
+            <div>
+                <h3>The Sweet Treats</h3>
+                <ul>
+                    <li><span>Feathery-light almond meringue shells infused with rich cocoa for a delicate yet satisfying crunch.</span></li>
+                    <li><span>Filled with a decadent, bittersweet ganache made from high-quality chopped chocolate and heavy cream.</span></li>
+                    <li><span>Carefully aged for 24 hours to ensure a melt-in-the-mouth consistency and a deeply balanced chocolate profile.</span></li>
+                </ul>
+            </div>
+            <div class="image-box">
+                <img src="https://i.postimg.cc/hjqn8pBr/choc.png" alt="Chocolate Macarons">
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>Crepes with Raspberry-Cassis Sauce</h2>
+        <div class="two-column">
+            <div class="image-box">
+                <img src="https://i.postimg.cc/L59Mw5hd/crepe.png" alt="Raspberry Crepes">
+            </div>
+            <div>
+                <h3>The Dessert Specialty</h3>
+                <ul>
+                    <li><span>Delicate, hand-turned crepes wrapped around a zesty honey-lime Greek yogurt filling for a creamy core.</span></li>
+                    <li><span>Generously drizzled with a luxurious raspberry-cassis sauce infused with fragrant notes of rose water.</span></li>
+                    <li><span>A light, floral, and refreshing specialty that serves as a graceful finale to our gastronomic journey.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="center-content">
+            <h1>Merci Beaucoup</h1>
+            <p class="subtitle" style="margin-bottom: 40px;">Thank you to our guests</p>
+            <div class="image-box" style="width: 500px; height: 300px; border-radius: 50%;">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Thank You">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let isAnimating = false; // Prevents spamming the keys while scrolling
+
+        // Finds exactly which slide is most visible right now
+        function getActiveSlideIndex() {
+            let minDistance = Infinity;
+            let activeIndex = 0;
+            slides.forEach((slide, index) => {
+                const rect = slide.getBoundingClientRect();
+                const centerDistance = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+                if (centerDistance < minDistance) {
+                    minDistance = centerDistance;
+                    activeIndex = index;
+                }
+            });
+            return activeIndex;
+        }
+
+        // Custom animation function for a slow, cinematic scroll
+        function smoothScrollTo(targetY, duration) {
+            const startY = window.pageYOffset;
+            const distance = targetY - startY;
+            let startTime = null;
+            isAnimating = true;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                
+                // Ease In-Out Cubic math for a soft start and soft stop
+                let t = timeElapsed / (duration / 2);
+                let run;
+                if (t < 1) {
+                    run = distance / 2 * t * t * t + startY;
+                } else {
+                    t -= 2;
+                    run = distance / 2 * (t * t * t + 2) + startY;
+                }
+
+                window.scrollTo(0, run);
+                
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                } else {
+                    window.scrollTo(0, targetY); // Snap exactly to final position at the end
+                    isAnimating = false;
+                }
+            }
+            requestAnimationFrame(animation);
+        }
+
+        // Key press listener
+        document.addEventListener('keydown', (e) => {
+            if (isAnimating) return; // Block input if already moving
+
+            const currentIndex = getActiveSlideIndex();
+            let nextIndex = null;
+
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (currentIndex < slides.length - 1) nextIndex = currentIndex + 1;
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (currentIndex > 0) nextIndex = currentIndex - 1;
+            }
+
+            if (nextIndex !== null) {
+                const targetSlide = slides[nextIndex];
+                const absoluteTop = targetSlide.getBoundingClientRect().top + window.pageYOffset;
+                
+                // Calculates the exact position to center the slide vertically
+                const targetY = absoluteTop - (window.innerHeight - targetSlide.offsetHeight) / 2;
+                
+                // 2000 represents the time in milliseconds (2 seconds for a slower, more luxurious glide)
+                smoothScrollTo(targetY, 2000); 
+            }
+        });
+    </script>
+</body>
+</html>
